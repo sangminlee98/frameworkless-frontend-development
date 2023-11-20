@@ -19,6 +19,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html", // 원본 HTML 파일 위치
+      inject: false,
     }),
   ],
   output: {
