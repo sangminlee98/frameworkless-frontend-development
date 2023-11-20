@@ -57,9 +57,11 @@ export default class App extends HTMLElement {
 
       this.footer = this.querySelector("todomvc-footer");
 
+      document.addEventListener("onclick", (e) => console.log(e));
+
       this.list = this.querySelector("todomvc-list");
       // TODO: event의 타입을 어떻게..?
-      this.list.addEventListener(EVENTS.DELETE_ITEM, (e: any) => {
+      this.list.addEventListener(EVENTS.DELETE_ITEM, (e: CustomEvent) => {
         this.deleteItem(e.detail.index);
       });
 
