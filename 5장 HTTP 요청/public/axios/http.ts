@@ -78,10 +78,12 @@ const deleteRequest = async <T>(
   return response.data;
 };
 
-export default {
+const http = {
   get,
   post,
   put,
   patch,
   delete: deleteRequest,
 };
+
+export default http;
